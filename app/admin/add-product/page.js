@@ -31,7 +31,7 @@ export default function AddProduct() {
     return (
         <div>
           <h2>Adicionar Produto</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSumit}>
             <input
               type="text"
               value={name}
