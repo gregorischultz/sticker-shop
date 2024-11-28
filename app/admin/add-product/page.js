@@ -13,9 +13,9 @@ export default function AddProduct() {
     e.preventDefaut() //essa linha impede o comportamento padrao  do formulario (carregar a pagina quando for submetido)
 
     const res = await fetch('/api/products', {
-      method: 'POST',
+      method: 'POST', //definine o metodo HTTP
       body: JSON.stringify({ name, description, price: parseFloat(price), imageUrl }), //aqui vai ser convertido os dados do formulario numastring JSON
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' }, //Define o cabeçalho da requisição para indicar que o corpo da requisição está no formato JSON.
     })
 
     if (res.ok) {
